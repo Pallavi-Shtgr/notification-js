@@ -13,7 +13,8 @@ body{
 .popup{
     position: absolute;
     left: 50%;
-    top: 0;
+    top: -25%;
+    visibility:visible;
     width: 490px;
     border-radius: 5px;
     padding: 13px 17px 20px;
@@ -21,9 +22,18 @@ body{
     display:flex;
     border-top: 3px solid #EA4D67;
     transform: translateX(-50%);
-    box-shadow: 0 10px 25px rgba(52,87,220,0);   
+    box-shadow: 0 10px 25px rgba(52,87,220,0); 
+    transition: all 0.25s ease ;  
 }
 
+.popup .show{
+    top:0;
+    visibility: visible;
+}
+
+.popup .online{
+    border-color: #2ECC71;
+}
 .popup .icon i{
     width:40px;
     height:40px;
@@ -35,6 +45,10 @@ body{
     justify-content: center;
     border-radius: 50%;
     background: #EA4D67;
+}
+
+.popup .online .icon i {
+    background: #2ECC71;
 }
 
 .popup .title {
@@ -57,4 +71,9 @@ body{
     padding: 9px 15px;
     border-radius: 4px;
     background: #5372f0;
+}
+
+.popup .online .reconnect{
+    background: #bfbfbf;
+    pointer-events: none;
 }
